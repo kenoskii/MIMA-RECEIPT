@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Mulish:wght@400;500;700&family=Playfair+Display:wght@800&family=Poppins:wght@400;600;800&display=swap');
+
+html {
+  /* 1rem=10px */
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', Courier, monospace;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: #4a4a68;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #f4f9ff;
+}
+
+.frame1 {
+  display: flex;
+  width: 100%;
+  padding: 5rem 0 5rem 0;
+  flex-direction: column;
+  align-items: center;
+  background: #1f68d6;
+}
+
+.logo {
+  margin-bottom: 10.5rem;
+}
+
+.logo2 {
+  margin-bottom: 3.2rem;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 3.8rem;
+  font-style: normal;
+  line-height: 3.9rem;
+  color: #fbfcfe;
+  margin-bottom: 8rem;
+}
+
+h4 {
+  font-style: nomal;
+  color: #fbfcfe;
+}
+
+/*body-msg*/
+.body-msg {
+  padding: 3.5rem 9.3rem 0rem;
+}
+
+.body-msg h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #4a4a68;
+}
+
+.body-msg h3 {
+  font-size: 2.2rem;
+  font-style: normal;
+  color: #4a4a68;
+}
+
+.line {
+  box-sizing: border-box;
+  border-color: #d1d1d1;
+  border-style: solid;
+  border-width: 1px 0;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+
+}
+
+.line p {
+
+  font-style: normal;
+  font-weight: 700;
+
+  line-height: 0.8rem;
+  color: #4a4a68;
+  margin-top: 1rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100vw;
+  margin-top: 4rem;
+}
+
+.section-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 15%;
+}
+
+@media (max-width: 768px) {
+  .section-top {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 15%;
+    grid-gap: 5%;
+  }
+
+  .social-icons img {
+    margin: 1rem;
+  }
+
+  .social-icons {
+    padding-top: 3.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: start;
+    width: 10%;
+  }
+
+  .section-top .top-right {
+    display: flex;
+    text-align: end;
+    padding-top: 5rem;
+  }
+
+  .section-top .top-left {
+    line-height: 1rem;
+  }
+
+}
+
+.section-top .top-right {
+  display: flex;
+  flex-direction: column;
+
+  /* margin-right: 20rem; */
+  text-align: end;
+  font-size: 2rem;
+  line-height: 1.7rem;
+  color: #4a4a68;
+}
+
+@media (max-width: 62rem) {
+  .section-top .top-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* margin-right: 20rem; */
+    /* text-align: end; */
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #4a4a68;
+  }
+
+  .section-top .top-left {
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+    font-size: 1.4rem;
+    color: #000000;
+  }
+}
+
+.section-top button {
+  font-family: inherit;
+  cursor: pointer;
+  width: 28rem;
+  height: 8rem;
+  border-radius: 15px;
+  background: #696365;
+  font-size: 2.8rem;
+  color: #fbfcfe;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.text>p {
+  margin-bottom: 2rem;
+}
+
+.text :nth-child(4) {
+  color: #3b7ee3;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.5rem;
+  width: 1.7rem;
+  height: 1.8rem;
+
+}
+
+.section-top .top-left :nth-child(1) {
+  line-height: 2rem;
+  color: #000000;
+}
+
+.section-top .top-left {
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+}
+
+.top-left>p {
+  margin-top: 2rem;
+}
+
+
+hr {
+  margin: 4.5rem 15%;
+  border: 0.2rem solid #1f68d6;
+}
+
+.section-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.bottom-left {
+  display: flex;
+  font-size: 1.5rem;
+  flex-direction: column;
+  margin-left: 30%;
+  line-height: 3rem;
+  color: #000000;
+  flex-wrap: nowrap;
+}
+
+.bottom-right {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: end;
+  justify-items: end;
+  align-content: start;
+  align-items: start;
+  margin-right: 30%;
+}
+
+.bottom-right .bold {
+  justify-self: end;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4rem;
+  color: #4a4a68;
+}
+
+.bottom-left img {
+  padding-right: 0.8rem;
+}
+
+.bottom-left :nth-child(1) {
+  font-family: helvetica;
+
+
+}
+
+.table .row1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: 15%;
+  box-sizing: border-box;
+  background: #1f68d6;
+  height: 4.5rem;
+  width: 70%;
+  text-align: center;
+  align-items: center;
+  color: #fbfcfe;
+}
+
+.table .row2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: 15%;
+  box-sizing: border-box;
+  height: 5.5rem;
+  width: 70%;
+  text-align: center;
+  align-items: center;
+  color: #000000;
+  font-size: 1.5rem;
+  border-bottom: 0.2rem solid #d1d1d1;
+}
+
+.table .row3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: 15%;
+  box-sizing: border-box;
+  height: 4.5rem;
+  width: 70%;
+  text-align: center;
+  align-items: center;
+  color: #000000;
+  border-bottom: 0.2rem solid #d1d1d1;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+ 
+}
+
+@media (max-width:39rem) {
+  .table .row1 {
+    align-items: center;
+    height: 6rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .table .row2 {
+    text-align: center;
+    align-items: center;
+    height: 6rem;
+    font-size: 1.5rem;
+  }
+
+  .table .row3 {
+    align-items: center;
+    text-align: center;
+    height: 6rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* .total {
+  margin-top: 30px;
+  
+  font-size: 14px;
+  color: #4a4a68;
+  font-weight: 500;
+  line-height: 24px;
+  font-style: normal;
+} */
+.total {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: end;
+  margin-top: 3rem;
+  margin-right: 15%;
+
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  font-style: normal;
+}
+
+.total .figure {
+
+  font-weight: 700;
+
+  padding-left: 0.5rem;
+}
+
+/* invoice-notice*/
+
+.invoice-notice {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #eef2f5;
+  text-align: center;
+
+
+
+  line-height: 1.7remx;
+  padding: 1.1rem;
+  margin-top: 5rem;
+}
+
+footer {
+  background-color: #CCEDFF;
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0 5rem 0;
+}
+
+.social-icons {
+  padding-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 10%;
+  margin-left: 46%;
+}
+
+
+.social-icons img {
+  width: 2.8rem;
+  height: 2.8rem;
+  padding: 2rem 0;
+}
+
+footer h2 {
+  color: #4a4a68;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+footer p {
+  padding-bottom: 1.5rem;
+  color: #4a4a68;
+}
+
+footer h1 {
+  color: #1f68d6;
+  text-decoration: underline;
+}
