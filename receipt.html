@@ -6,107 +6,378 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIMA RECEIPT</title>
-    <link rel="stylesheet" href="receipt.css">
+    <style>
+        html {
+            /* 1rem=10px */
+            font-size: 62.5%;
+        }
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: inherit;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media (max-width: 50rem) {
+            .section-top {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                justify-items: center;
+                margin: 7% !important;
+                grid-gap: 5% !important;
+            }
+
+            .social-icons img {
+                margin: 1rem !important;
+            }
+
+            .social-icons {
+                padding-top: 3.5rem !important;
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                justify-content: center !important;
+                justify-items: start !important;
+                width: 10% !important;
+            }
+
+            .section-top .top-right {
+                display: flex !important;
+                text-align: end !important;
+                padding-top: 5rem !important;
+            }
+
+            .section-top .top-left {
+                line-height: 1rem !important;
+            }
+
+        }
+
+        @media (max-width: 62rem) {
+            .section-top .top-right {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                font-size: 1rem !important;
+                line-height: 1.3rem !important;
+                color: #4a4a68 !important;
+            }
+
+            button {
+                width: 20rem !important;
+                height: 5rem !important;
+                font-size: 2rem !important;
+            }
+
+            .section-top .top-left {
+                display: flex !important;
+                flex-direction: column !important;
+                line-height: 1.2rem !important;
+                font-size: 1rem !important;
+                color: #000000 !important;
+            }
+
+            .section-bottom {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                justify-content: space-between !important;
+                font-size: 1rem !important;
+            }
+
+            .section-bottom .bottom-left {
+                font-size: 1rem !important;
+            }
+
+        }
+
+        @media (max-width:39rem) {
+            .table .row1 {
+                align-items: center !important;
+                height: 6rem !important;
+                /* text-align: center !important; */
+                font-size: 1.5rem !important;
+            }
+
+            .body-msg {
+                font-size: 1rem !important;
+                padding: .8rem !important;
+            }
+
+            .body-msg>h1,
+            .body-msg>h3 {
+                font-size: 1.5rem !important;
+            }
+
+            .table .row2 {
+                text-align: center !important;
+                align-items: center !important;
+                height: 6rem !important;
+                font-size: 1rem !important;
+            }
+
+            .table .row3 {
+                align-items: center !important;
+                text-align: center !important;
+                height: 6rem !important;
+                font-size: 1rem !important;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Mulish:wght@400;500;700&family=Playfair+Display:wght@800&family=Poppins:wght@400;600;800&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 </head>
 
-<body>
-    <header class="frame1">
-        <img src="mima-img/Mima-light-logo 1.svg" alt="Mima-light-logo" width="152px" class="logo">
-        <img src="mima-img/Vector (1).svg" alt="" width="67px" class="logo2">
+<body style="font-family: 'Montserrat', Courier, monospace;
+font-weight: 400;
+font-size: 1.8rem;
+line-height: 2.2rem;
+color: #4a4a68;
+margin: 0;
+width: 100%;
+height: 100%;
+background: #f4f9ff;">
+    <header class="frame1" style="display: flex;
+    width: 100%;
+    padding: 5rem 0 5rem 0;
+    flex-direction: column;
+    align-items: center;
+    background: #1f68d6;">
+        <img src="mima-img/Mima-light-logo 1.svg" alt="Mima-light-logo" width="152px" class="logo"
+            style="margin-bottom: 10.5rem;">
+        <img src="mima-img/Vector (1).svg" alt="" width="67px" class="logo2" style="margin-bottom: 3.2rem;">
 
-        <h3>
+        <h3 style="font-weight: 700;
+        font-size: 3.8rem;
+        font-style: normal;
+        line-height: 3.9rem;
+        color: #fbfcfe;
+        margin-bottom: 8rem;">
             Invoice
         </h3>
-        <h4>
+        <h4 style="font-style: nomal;
+        color: #fbfcfe;">
             06/08/2022
         </h4>
     </header>
     <!--BODY OF THE MSG-->
-    <div class="body-msg">
-        <h1>Hi Hicks Enterprises,</h1>
-        <h3>This is Body of the message</h3>
+    <div class="body-msg" style="padding: 3.5rem 9.3rem 0rem; margin-bottom: 2rem;">
+        <h1 style="font-weight: 700;
+        font-size: 2.5rem;
+        color: #4a4a68;">Hi Hicks Enterprises,</h1>
+        <h3 style="font-size: 2.2rem;
+        font-style: normal;
+        color: #4a4a68;">This is Body of the message</h3>
     </div>
-    <div class="line">
-        <p>#00001</p>
+    <div class="line" style=" box-sizing: border-box;
+    border-color: #d1d1d1;
+    border-style: solid;
+    border-width: 1px 0;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;">
+        <p style="font-style: normal;
+        font-weight: 700;
+        line-height: 0.8rem;
+        color: #4a4a68;
+        margin-top: 1rem;">#00001</p>
     </div>
     <!--section1-->
-    <section>
-        <div class="section-top">
-            <div class="top-left">
-                <h1>Hicks Enterprises</h1>
-                <p>33 TE Williams Street Kfarm Estate obawole Iju, Lagos</p>
-                <p>
+    <section style="display: flex;
+    flex-direction: column;
+    flex-basis: 100vw;
+    margin-top: 4rem;">
+        <div class="section-top" style="display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 7%;">
+            <div class="top-left" style="display: flex;
+            flex-direction: column;
+            color: #000000;">
+                <h1 style="line-height: 2rem;">Hicks Enterprises</h1>
+                <p style="margin-top: 2rem;">33 TE Williams Street Kfarm Estate obawole Iju, Lagos</p>
+                <p style="margin-top: 2rem;">
                     <img src="mima-img/call.png" alt=""> +2347069671335
                 </p>
-                <p><img src="mima-img/email.png" alt=""> sammyjones@gmail.com</p>
+                <p style="margin-top: 2rem;"><img src="mima-img/email.png" alt=""> sammyjones@gmail.com</p>
             </div>
-            <div class="top-right">
-                <div class="text">
-                    <p>Bank: <strong>Providus Bank</strong></p>
-                    <p>Account Name: <strong>MERCHANT (Seo Enterprise)</strong></p>
-                    <p>Account Number: <strong>9978757358</strong> </p>
-                    <p>Or</p>
+            <div class="top-right" style="display: flex;
+            flex-direction: column;
+            text-align: end;
+            font-size: 2rem;
+            line-height: 1.7rem;
+            color: #4a4a68;">
+                <div class="text" style="display: flex;
+                flex-direction: column;">
+                    <p style="margin-bottom: 2rem;">Bank: <strong>Providus Bank</strong></p>
+                    <p style="margin-bottom: 2rem;">Account Name: <strong>MERCHANT (Seo Enterprise)</strong></p>
+                    <p style="margin-bottom: 2rem;">Account Number: <strong>9978757358</strong> </p>
+                    <p style="margin-bottom: 2rem; color: #3b7ee3;
+                    font-weight: 700;
+                    font-style: normal;
+                    font-size: 2.5rem;
+                    width: 1.7rem;
+                    height: 1.8rem;">Or</p>
                 </div>
-                <button>Click Here to Pay</button>
+                <button style=" font-family: inherit;
+                cursor: pointer;
+                width: 28rem;
+                height: 8rem;
+                border-radius: 15px;
+                background: #696365;
+                font-size: 2.8rem;
+                color: #fbfcfe;">Click Here to Pay</button>
             </div>
         </div>
-        <hr>
-        <div class="section-bottom">
-            <div class="bottom-left">
-                <p><strong>Bill To</strong></p>
+        <hr style=" margin: 4.5rem 7%;
+        border: 0.2rem solid #1f68d6;">
+        <div class="section-bottom" style="display: grid;
+        grid-template-columns: 1fr 1fr; margin: 0 7%;">
+            <div class="bottom-left" style="display: grid;
+            grid-template-columns: 1fr;
+            font-size: 1.5rem;
+            line-height: 3rem;
+            color: #000000;">
+                <p style="font-family: helvetica;"><strong>Bill To</strong></p>
                 <p>Sammy James</p>
                 <p>40, Obateye street, Isolo, Lagos</p>
-                <p><img src="mima-img/call.png" alt="call"> <span>+2347069671335</span></p>
-                <p><img src="mima-img/email.png" alt="email"><span>sammyjones@gmail.com</span></p>
-            </div>
-            <div class="bottom-right">
-                <p>
-                    <span>Invoice Date:</span> <span class="bold">05/12/21</span>
+                <p><img src="mima-img/call.png" alt="call" style=" padding-right: 0.8rem;"> <span>+2347069671335</span>
                 </p>
-                <p> <span>Due Date:</span> <span class="bold">08/10/21</span></p>
+                <p><img src="mima-img/email.png" alt="email"
+                        style=" padding-right: 0.8rem;"><span>sammyjones@gmail.com</span></p>
+            </div>
+            <div class="bottom-right" style="display: grid;
+            grid-template-columns: 1fr;
+            justify-content: end;
+            justify-items: end;
+            align-content: start;
+            align-items: start; text-align: end;
+            ">
+                <p>
+                    <span>Invoice Date:</span> <span class="bold" style="justify-self: end;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    line-height: 1.4rem;
+                    color: #4a4a68;">05/12/21</span>
+                </p>
+                <p> <span>Due Date:</span> <span class="bold" style="justify-self: end;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    line-height: 1.4rem;
+                    color: #4a4a68;">08/10/21</span></p>
 
             </div>
         </div>
         <div class="table">
-            <div class="row1">
+            <div class="row1" style=" display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin: 0 7%;
+            box-sizing: border-box;
+            background: #1f68d6;
+            height: 4.5rem;
+            /* width: 100%; */
+            text-align: center;
+            align-items: center;
+            color: #fbfcfe;">
                 <span>Service</span>
                 <span>Price</span>
                 <span>Qty</span>
                 <span>Total</span>
             </div>
-            <div class="row2">
+            <div class="row2" style="display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin: 0 7%;
+            box-sizing: border-box;
+            height: 5.5rem;
+            /* width: 70%; */
+            text-align: center;
+            align-items: center;
+            color: #000000;
+            font-size: 1.5rem;
+            border-bottom: 0.2rem solid #d1d1d1;">
                 <span>Hermes Bag</span>
                 <span>N500,000</span>
                 <span>1</span>
                 <span>N500,000</span>
             </div>
-            <div class="row3">
+            <div class="row3" style="display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin: 0 7%;
+            box-sizing: border-box;
+            height: 4.5rem;
+            /* width: 70%; */
+            text-align: center;
+            align-items: center;
+            color: #000000;
+            border-bottom: 0.2rem solid #d1d1d1;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.5rem;">
                 <span>Channel Purse</span>
                 <span>N300,000</span>
                 <span>1</span>
                 <span>N300,000</span>
             </div>
         </div>
-        <div class="total">
-            <div class="words"><span>Sub Total</span> <span class="figure">N800,000.00</span></div>
-            <div class="words"><span>Discount</span> <span class="figure">N0.00</span></div>
-            <div class="words"><span>Tax %</span> <span class="figure">N17,500.00</span></div>
-            <div class="words"><span>Grand Total</span> <span class="figure">N817,500.00</span></div>
+        <div class="total" style="display: grid;
+        grid-template-columns: 1fr;
+        justify-items: end;
+        margin-top: 3rem;
+        margin-right: 7%;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 2.4rem;
+        font-style: normal;">
+            <div class="words"><span>Sub Total</span> <span class="figure" style="font-weight: 700;
+                padding-left: 0.5rem;">N800,000.00</span></div>
+            <div class="words"><span>Discount</span> <span class="figure" style="font-weight: 700;
+                padding-left: 0.5rem;">N0.00</span></div>
+            <div class="words"><span>Tax %</span> <span class="figure" style="font-weight: 700;
+                padding-left: 0.5rem;">N17,500.00</span></div>
+            <div class="words"><span>Grand Total</span> <span class="figure" style="font-weight: 700;
+                padding-left: 0.5rem;">N817,500.00</span></div>
         </div>
     </section>
-    <div class="invoice-notice">
+    <div class="invoice-notice" style="box-sizing: border-box;
+    width: 100%;
+    background-color: #eef2f5;
+    text-align: center;
+    line-height: 1.7remx;
+    padding: 1.1rem;
+    margin-top: 5rem;">
         <p>Invoice was created on a computer and is valid without the signature and seal.</p>
     </div>
-    <footer>
-        <div class="social-icons">
-            <img src="mima-img/facebook.png" alt="">
-            <img src="mima-img/twitter.png" alt="">
-            <img src="mima-img/instagram.png" alt="">
+    <footer style="background-color: #CCEDFF;
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0 5rem 0;">
+        <div class="social-icons" style="padding-top: 2.5rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 10%;
+        margin-left: 46%;">
+            <img src="mima-img/facebook.png" alt="" style="width: 2.8rem;
+            height: 2.8rem;
+            padding: 2rem 0;">
+            <img src="mima-img/twitter.png" alt="" style="width: 2.8rem;
+            height: 2.8rem;
+            padding: 2rem 0;">
+            <img src="mima-img/instagram.png" alt="" style="width: 2.8rem;
+            height: 2.8rem;
+            padding: 2rem 0;">
         </div>
-        <h2>SoftBlue Nigeria</h2>
-        <p>24, Billings way, Oregun, Ikeja, Lagos state.</p>
-        <h1>Unsubscribe</h1>
+        <h2 style="color: #4a4a68;
+        padding-top: 1rem;
+        padding-bottom: 2rem;">SoftBlue Nigeria</h2>
+        <p style="padding-bottom: 1.5rem;
+        color: #4a4a68;">24, Billings way, Oregun, Ikeja, Lagos state.</p>
+        <h1 style="color: #1f68d6;
+        text-decoration: underline;">Unsubscribe</h1>
     </footer>
 </body>
 
